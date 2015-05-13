@@ -2,7 +2,7 @@
 author: Namita Maharanwar
 Date: 11 May, 2015
 """
-
+import sys
 import requests
 import hashlib
 from bs4 import BeautifulSoup
@@ -86,6 +86,5 @@ def insert_level_two():
         find_internal_urls(i.link)
 
 if __name__ == "__main__":
-    lufthansa_url = "http://www.lufthansa.com/online/portal/lh/ua/homepage"
-    find_internal_urls(lufthansa_url)
+    find_internal_urls(sys.argv[1])
     insert_level_two()
