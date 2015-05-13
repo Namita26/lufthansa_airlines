@@ -23,7 +23,13 @@ Phase 3:
   
   
   Steps to execute:
+  
   1. export DJANGO_SETTINGS_MODULE="lufthansa_airlines.settings"
-  2. Create database lufthansa in mysql and do "python manage.py syncdb" 
-  3. First run the scraper.py from lufthansa_airlines/scraper.py
-  4. Then run the "airlines/view.py" and give one param while running as status code(200/504/403 etc)
+  2. Create database named "lufthansa" in mysql. Instructions:
+     2.1 mysql -u -p lufthansa; 
+     2.2 Enter "create database lufthansa;" on mysql prompt.
+     2.3 Enter your username and password for mysql.
+     2.4 Go to lufthansa_airlines/settings.py, and add your mysql username and password under Database dict.
+     2.5 Do "python manage.py syncdb" .
+  3. Run python lufthansa_airlines/scraper.py "http://www.lufthansa.com/online/portal/lh/ua/homepage".
+  4. Then run the "airlines/view.py" and give one param while running as status code(200/504/403 etc).
