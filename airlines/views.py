@@ -2,7 +2,7 @@
 @author: Namita Maharanwar
 function which returns all the URLS according to the status code
 """
-
+import sys
 import json
 from airlines.models import LinksInformation
 
@@ -22,4 +22,5 @@ def fetch_url_information(status_code):
     return result
 
 if __name__ == "__main__":
-    print fetch_url_information(504)
+    code = sys.argv[1]
+    print fetch_url_information(code)
